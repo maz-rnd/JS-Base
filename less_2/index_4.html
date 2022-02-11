@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        /*Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя 
+параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их 
+и возвращать результат.
+Обязательно использовать оператор return.
+*/
+        'use strict';
+        let a = parseInt(prompt('Введите первое число'));
+        let b = parseInt(prompt('Введите второе число'));
+
+        function multiplication(a, b) { //операция умножение
+            return a * b;
+        }
+
+        function addition(a, b) { //операция сложение
+            return a + b;
+        }
+
+        function subtraction(a, b) { //операция вычитание
+            return a - b;
+        }
+
+        function division(a, b) { //операция деление 
+            return a / b;
+        }
+
+        alert(a + '* ' + b + ' = ' + multiplication(a, b)); //вызов функции уможение
+        alert(a + '+ ' + b + ' = ' + addition(a, b)); // вызов функции сложение
+        alert(a + '- ' + b + ' = ' + subtraction(a, b)); // вызов функции вычитание
+        alert(a + '/ ' + b + ' = ' + division(a, b)); // вызов функции деление
+    </script>
+</body>
+
+</html>
