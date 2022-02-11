@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических 
+операций
+*/
+        let arg1 = parseInt(prompt('Введите первое число')); // Введем первое число
+        let arg2 = parseInt(prompt('Введите второе число')); // Введем второе число
+        let operation = prompt('Введите одну операцию (*, /, -, +)'); // Введем тип операцию
+
+        function multiplication(arg1, arg2) { //функция операция умножение
+            return arg1 * arg2;
+        }
+
+        function addition(arg1, arg2) { //функция операция сложение
+            return arg1 + arg2;
+        }
+
+        function subtraction(arg1, arg2) { //функция операция вычитание
+            return arg1 - arg2;
+        }
+
+        function division(arg1, arg2) { //функция операция деление 
+            return arg1 / arg2;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '*':
+                    return multiplication(arg1, arg2);
+                case '+':
+                    return addition(arg1, arg2);
+                case '/':
+                    return division(arg1, arg2);
+                case '-':
+                    return subtraction(arg1, arg2);
+                default:
+                    throw new error('Нет такой операции' + operation);
+            }
+        }
+
+        alert(mathOperation(arg1, arg2, operation));
+    </script>
+</body>
+
+</html>
